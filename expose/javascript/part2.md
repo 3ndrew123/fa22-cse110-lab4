@@ -1,18 +1,18 @@
 # Part 2 Answers
-1. Line 12 prints out "3"
-2. Line 13 prints out "150"
-3. Line 14 prints out "150"
-4. This function will return [50, 100, 150]
+1. Line 12 prints out "3" since i is declared using var, so it is in scope of the log statement. Also since the length of list is 3, i will increment until it reaches 3 from for loop.
+2. Line 13 prints out "150" because discountedPrice is declared using var, so it is in scope of the log statement. discountedPrice is 150 since it is the last item being manipulated from the list before we exit the for loop.
+3. Line 14 prints out "150" because finalPrice is declared using var, so it is in scope of the log statement. finalPrice is 150 since it is discountedPrice * 1 essentially (x * 100 / 100 = x) and we know from the last problem discountedPrice is 150
+4. This function will return [50, 100, 150] since it uses the in scope variable discounted, which contains values from the prices except manipulated. With the for loop, the we go through prices and calculate the discounted price to put into the new array. Once we go through the array, we finish and return the new array discounted.
 5. This code will cause an error because i is declared using let, which means that i does not exist outside of the for loop
 6. This code will casue an error because discountedPrice is only available in the scope of the for loop, so it does not exist outside loop.
-7. Line 14 prints out "150"
-8. This function will return [50, 100, 150]
+7. Line 14 prints out "150" since the variable is in scope as it was declared outside of the loop.
+8. This function will return [50, 100, 150] since the variable is in scope and was declared outside the loop, which means we can access it.
 9. This code will cause an error because i is declared using let in the for loop, which means it does not exist outside the loop
-10. Line 12 prints out "3"
-11. This function will return [50, 100, 150]
+10. Line 12 prints out "3" because the variable is declared outside the loop, so it is in scope.
+11. This function will return [50, 100, 150] because although discounted is const, we can manipulate what is inside of the discounted array
 12. a. student.name
     b. student["Grad Year"]
-    c. student.greeting <--- not too sure of this
+    c. student.greeting() <--- not too sure of this
     d. student['Favorite Teacher'].name
     e.  student.courseLoad[0]
 13. a. This outputs '32' since one of them is a string, so it typecasts 2 and returns a string.
@@ -33,4 +33,4 @@
 16. This code should print out 21, 45, 5, and 2
 17. The result should be [2, 4, 6]. When we call modifyArray, we pass through an array [1, 2, 3] and the function do something. From the code, it seems that modifyArray returns an array where all the items in the input array are altered by the input function. When we calll modifyArray, we also input the function doSomething, which returns 2 * a number. So using that function on every input in the array goes from [1, 2, 3] to [2, 4, 6].
 18. Code should output time every second
-19. The function outputs 1, 4, 3, 2.
+19. The function outputs 1 4 3 2.
